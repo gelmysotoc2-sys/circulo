@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Círculo">
+<meta name="theme-color" content="#f2f2f7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<meta name="description" content="Tu diario privado de personas, emociones y límites.">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="icon" href="icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="styles.css">
+<title>Círculo</title>
+</head>
+<body>
+<div id="app">
+  <div id="topbar"><span id="topbar-title"></span></div>
+  <main id="view"></main>
+</div>
+
+<nav id="tabbar" aria-label="Secciones">
+  <button class="tab" data-act="tab" data-tab="hoy" aria-label="Hoy">
+    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>
+    <span>Hoy</span>
+  </button>
+  <button class="tab" data-act="tab" data-tab="personas" aria-label="Personas">
+    <svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.4"/><path d="M2.8 19.5c.6-3.4 3.2-5.4 6.2-5.4s5.6 2 6.2 5.4"/><circle cx="16.8" cy="9" r="2.6"/><path d="M16.6 14.2c2.4.2 4.2 1.9 4.6 4.8"/></svg>
+    <span>Personas</span>
+  </button>
+  <button class="tab tab-add" data-act="newEntry" aria-label="Nuevo registro">
+    <span class="plus"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span>
+  </button>
+  <button class="tab" data-act="tab" data-tab="consejos" aria-label="Consejos">
+    <svg viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.6 10.8c.7.6 1.1 1.3 1.1 2.2h5c0-.9.4-1.6 1.1-2.2A6 6 0 0 0 12 3z"/></svg>
+    <span>Consejos</span>
+  </button>
+  <button class="tab" data-act="tab" data-tab="yo" aria-label="Yo">
+    <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.8"/><path d="M4.5 20.5c.8-4 3.8-6.3 7.5-6.3s6.7 2.3 7.5 6.3"/></svg>
+    <span>Yo</span>
+  </button>
+</nav>
+
+<div id="sheets"></div>
+<div id="toast" role="status" aria-live="polite"></div>
+<div id="lock" hidden></div>
+
+<script src="app.js"></script>
+</body>
+</html>
